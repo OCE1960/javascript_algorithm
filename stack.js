@@ -38,11 +38,18 @@ class Stack {
         return this.data_store;
     }
 
+    isEmpty(){
+        if(this.data_store.length == 0){
+            return true;
+        }
+        return false;
+    }
+
 
 }
 
 let stack = new Stack();
-stack.push('FUTO');
+ stack.push('FUTO');
 stack.push(['IMSU', 'NEKEDE']);
 console.log(stack.getStore());
 console.log(stack.pop());
@@ -54,4 +61,5 @@ stack.push('FUTO');
 stack.push(['FUTMINNA', 'NEKEDE']);
 console.log(stack.getStore());
 stack.clear()
-console.log(stack.getStore());
+console.log(stack.getStore()); 
+
