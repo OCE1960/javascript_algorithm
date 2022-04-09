@@ -27,11 +27,32 @@ class LinkedList {
 
     }
 
-    remove() {
+    findPreviousNode(item){
+        let previousNode = this.head;
+        while((previousNode.next != null) && (previousNode.next.element != element)){
+            previousNode = previousNode.next;
+        }
+        return previousNode;
+
+    }
+
+    remove(item) {
+
+        let previousNode = this.findPreviousNode(item)
+
+        if(previousNode.next != null){
+            previousNode.next = previousNode.next.next;
+        }
 
     }
 
     display() {
+
+        current_node = this.head;
+        while(current_node.next != null){
+            console.log(current_node.element);
+            current_node = current_node.next;
+        }
 
     }
 }
